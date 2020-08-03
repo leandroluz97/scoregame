@@ -1,0 +1,271 @@
+/*==============================*/
+/* Document default*/
+/*==============================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Century Gothic", sans-serif;
+}
+
+body {
+  background-image: url("./img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1024px) {
+  body {
+    background-image: none;
+    background-color: #f1f1f1;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+    background-color: none;
+  }
+}
+/*==============================*/
+/* Wrapper*/
+/*==============================*/
+.wrapper {
+  max-width: 1100px;
+  max-height: 650px;
+  position: relative;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+/*==============================*/
+/* Wrapper Score*/
+/*==============================*/
+
+.wrapper-score {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #f1f1f1;
+}
+@media (max-width: 768px) {
+  .wrapper-score {
+    flex-direction: column;
+  }
+}
+/*==============================*/
+/* Wrapper right*/
+/*==============================*/
+
+.wrapper-right {
+  flex: 1 0 auto;
+  padding: 7em 0 9em 0;
+}
+.content-right {
+  position: relative;
+}
+.score-1 {
+  font-size: 8em;
+  font-weight: 200;
+  color: #353535;
+}
+.player-1 {
+  font-weight: 200;
+  font-size: 3em;
+  color: #353535;
+}
+.player-1::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #f97203;
+  position: absolute;
+  top: 25px;
+  left: 140px;
+}
+@media (max-width: 1024px) {
+  .player-1::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-right {
+    padding: 3em 0 2em 0;
+  }
+}
+.wrapper-right:hover {
+  background: #e7e7e7;
+}
+/*==============================*/
+/* Wrapper left*/
+/*==============================*/
+.wrapper-left {
+  flex: 1 0 auto;
+  padding: 7em 0 9em 0;
+}
+.content-left {
+  position: relative;
+}
+.score-2 {
+  font-size: 8em;
+  font-weight: 200;
+  color: #353535;
+}
+.player-2 {
+  font-weight: 200;
+  font-size: 3em;
+  color: #353535;
+}
+.player-2::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #f97203;
+  position: absolute;
+  top: 25px;
+  left: 140px;
+}
+@media (max-width: 1024px) {
+  .player-2::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-left {
+    padding: 13em 0 2em 0;
+  }
+}
+.wrapper-left:hover {
+  background: #e7e7e7;
+}
+/*==============================*/
+/* Count buttons*/
+/*==============================*/
+.count {
+  display: flex;
+  min-height: 5vh;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 90px;
+  margin: auto;
+  background: #f97203;
+}
+
+.count-right-1,
+.count-right-2,
+.count-left-1,
+.count-left-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: background 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.count img {
+  height: 70px;
+  transition: all 1s ease;
+}
+.count img:active {
+  transform: scale(0.8);
+}
+.count-right-1:hover {
+  background: #e46607;
+  cursor: pointer;
+}
+.count-right-2:hover {
+  background: #e46607;
+  cursor: pointer;
+}
+.count-left-1:hover {
+  background: #e46607;
+  cursor: pointer;
+}
+.count-left-2:hover {
+  background: #e46607;
+  cursor: pointer;
+}
+
+/*==============================*/
+/* New Game*/
+/*==============================*/
+
+.new {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.new:hover {
+  cursor: pointer;
+}
+.new p {
+  font-weight: 800;
+  padding-left: 3px;
+  color: #353535;
+  transition: transform 0.5s ease;
+}
+#new-icon {
+  height: 3vh;
+  transition: transform 0.5s ease;
+}
+.newGameEffect {
+  transform: translate(5px);
+}
+.newIconEffect {
+  transform: translate(-5px);
+}
+
+/*==============================*/
+/* Play*/
+/*==============================*/
+.play {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.playin {
+  font-weight: 800;
+  padding-left: 3px;
+  color: #353535;
+}
+#play {
+  font-size: 2.5em;
+  color: #f97203;
+  font-weight: 600;
+}
+
+.play input {
+  outline: none;
+  border: none;
+  width: 15vw;
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  .play {
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .play input {
+    width: 50vw;
+  }
+}
+
+/*==============================*/
+/* Winner loser*/
+/*==============================*/
+
+.loser {
+  color: rgb(194, 194, 194);
+  text-decoration: line-through;
+}

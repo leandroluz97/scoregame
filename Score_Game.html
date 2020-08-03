@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Score</title>
+  </head>
+  <body>
+    <!--Global Score-->
+    <div class="wrapper">
+      <!--Wrapper Score-->
+      <div class="wrapper-score">
+        <!--Left Score-->
+        <div class="wrapper-left">
+          <div class="content-left">
+            <h1 id="player-1" class="player-1">PLAYER 1</h1>
+            <h2 id="score-1" class="score-1">0</h2>
+            <div class="count">
+              <div class="count-left-1">
+                <img
+                  id="plus-left"
+                  src="./img/plus.svg"
+                  alt="plus point button"
+                />
+              </div>
+              <div class="count-right-1">
+                <img
+                  id="plus-right"
+                  src="./img/minus.svg"
+                  alt="minus point button"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Right Score-->
+        <div class="wrapper-right">
+          <div class="content-left">
+            <h1 id="player-2" class="player-2">PLAYER 2</h1>
+            <h2 id="score-2" class="score-2">0</h2>
+            <div class="count">
+              <div class="count-left-2">
+                <img
+                  id="plus-right"
+                  src="./img/plus.svg"
+                  alt="plus point button"
+                />
+              </div>
+              <div class="count-right-2">
+                <img
+                  id="plus-right"
+                  src="./img/minus.svg"
+                  alt="minus point button"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="new" id="newGame">
+        <img id="new-icon" src="./img/plus_orange.svg" alt="" />
+        <p id="newLabel">New Game</p>
+      </div>
+      <div class="play">
+        <p class="playin">Playing to:</p>
+        <p id="play">5</p>
+        <input type="number" name="" id="input" step="1" min="0" />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
