@@ -28,6 +28,7 @@ function playerNames() {
     playerTwo.innerHTML = player2;
   }
 }
+//call the function
 playerNames();
 
 //Mouse Over
